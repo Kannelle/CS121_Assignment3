@@ -8,9 +8,32 @@ public class Index {
 	
 	// Takes as a parameter the location (directory) of all the files 
 	// and produces basic index as output.
+	// The index maps words to documents (pages).
 	public static Multimap<String, String> getIndex(String filePath) {
 		Multimap<String, String> multimap = ArrayListMultimap.create();
+		
+		
 		//TODO
+		
+		// Find the number of documents
+		// Count the number of values per key in the multimap and find the sum
+		int valueCounter = 0;
+		for(String value : multimap.values()) {
+		   valueCounter++;
+		  }
+		System.out.println("Documents: "+valueCounter);
+		
+		// Find the number of [unique] words 
+		// Count the number of keys in the multimap
+		int size = multimap.size();
+		System.out.println("Keys: "+size); 
+		
+		// Create a sample index: you can simply provide a text version of the key value pairs 
+		// You have in the indexes. Sample index is shown below.
+		
+		// Find the total size (in KB) of your index on disk
+		
+		//find the time taken to create your index
 		return multimap;
 	}
 }
